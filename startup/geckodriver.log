@@ -1,0 +1,164 @@
+1564454423582	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.2TGt19NLIa0P"
+
+(firefox:7636): GLib-GIO-CRITICAL **: 21:40:25.395: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:7636): GLib-GIO-CRITICAL **: 21:40:25.396: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:7636): GLib-GIO-CRITICAL **: 21:40:25.396: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1564454431121	Marionette	INFO	Listening on port 43057
+1564454431152	Marionette	WARN	TLS certificate errors will be ignored for this session
+1564454431810	addons.xpi	WARN	Failed to parse recommendation: TypeError: NetworkError when attempting to fetch resource.(resource://gre/modules/addons/XPIProvider.jsm:200:15) JS Stack trace: awaitPromise@XPIProvider.jsm:200:15
+syncLoadManifest@XPIInstall.jsm:685:22
+updateMetadata@XPIDatabase.jsm:2537:32
+updateExistingAddon@XPIDatabase.jsm:2713:23
+processFileChanges@XPIDatabase.jsm:2789:31
+getNewSideloads@XPIProvider.jsm:2762:28
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[Parent 7636, Gecko_IOThread] WARNING: pipe error (111): Connection reset by peer: file /build/firefox-izpums/firefox-68.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x35011D,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E008F,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+1564454564118	Marionette	INFO	Stopped listening on port 43057
+1564454644659	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.1yyuGEmXT1GJ"
+
+(firefox:7858): GLib-GIO-CRITICAL **: 21:44:06.037: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:7858): GLib-GIO-CRITICAL **: 21:44:06.037: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:7858): GLib-GIO-CRITICAL **: 21:44:06.038: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1564454652577	Marionette	INFO	Listening on port 37141
+1564454652685	Marionette	WARN	TLS certificate errors will be ignored for this session
+1564454653087	addons.xpi	WARN	Failed to parse recommendation: TypeError: NetworkError when attempting to fetch resource.(resource://gre/modules/addons/XPIProvider.jsm:200:15) JS Stack trace: awaitPromise@XPIProvider.jsm:200:15
+syncLoadManifest@XPIInstall.jsm:685:22
+updateMetadata@XPIDatabase.jsm:2537:32
+updateExistingAddon@XPIDatabase.jsm:2713:23
+processFileChanges@XPIDatabase.jsm:2789:31
+getNewSideloads@XPIProvider.jsm:2762:28
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1564501031391	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.eWiC5wjecLMW"
+1564501033262	addons.xpi	WARN	Failed to parse recommendation: TypeError: NetworkError when attempting to fetch resource.(resource://gre/modules/addons/XPIProvider.jsm:200:15) JS Stack trace: awaitPromise@XPIProvider.jsm:200:15
+syncLoadManifest@XPIInstall.jsm:685:22
+updateMetadata@XPIDatabase.jsm:2537:32
+updateExistingAddon@XPIDatabase.jsm:2713:23
+processFileChanges@XPIDatabase.jsm:2789:31
+checkForChanges@XPIProvider.jsm:2728:55
+startup@XPIProvider.jsm:2265:12
+callProvider@AddonManager.jsm:193:31
+_startProvider@AddonManager.jsm:569:5
+startup@AddonManager.jsm:725:14
+startup@AddonManager.jsm:2797:26
+observe@addonManager.js:65:29
+1564501033825	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1564501033825	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1564501033826	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1564501033827	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(firefox:3817): GLib-GIO-CRITICAL **: 10:37:15.838: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:3817): GLib-GIO-CRITICAL **: 10:37:15.839: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:3817): GLib-GIO-CRITICAL **: 10:37:15.839: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1564501051840	Marionette	INFO	Listening on port 35655
+1564501052089	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://add0n.com/google-hangouts.html?v=0.1.9&type=install, line 1: TypeError: enh is null
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+Extension error: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDOMWindowUtils.removeSheetUsingURIString]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://gre/modules/ExtensionCommon.jsm :: runSafeSyncWithoutClone :: line 65"  data: no] undefined 65
+[[Exception stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:65:12
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+shutdownExtension@resource://gre/modules/ExtensionContent.jsm:912:17
+shutdownExtension@resource://gre/modules/ExtensionContent.jsm:960:21
+shutdown@resource://gre/modules/ExtensionChild.jsm:757:22
+receiveMessage@resource://gre/modules/ExtensionProcessScript.jsm:262:38
+Current stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:67:129
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+shutdownExtension@resource://gre/modules/ExtensionContent.jsm:912:17
+shutdownExtension@resource://gre/modules/ExtensionContent.jsm:960:21
+shutdown@resource://gre/modules/ExtensionChild.jsm:757:22
+receiveMessage@resource://gre/modules/ExtensionProcessScript.jsm:262:38
+]]
+[Parent 3817, Gecko_IOThread] WARNING: pipe error (173): Connection reset by peer: file /build/firefox-izpums/firefox-68.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1564501453286	Marionette	INFO	Stopped listening on port 35655
+1564501476971	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.5zj9rMuM0XL0"
+
+(firefox:4481): GLib-GIO-CRITICAL **: 10:44:38.613: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:4481): GLib-GIO-CRITICAL **: 10:44:38.614: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:4481): GLib-GIO-CRITICAL **: 10:44:38.614: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1564501489510	Marionette	INFO	Listening on port 42217
+1564501489691	Marionette	WARN	TLS certificate errors will be ignored for this session
+1564501490791	addons.xpi	WARN	Failed to parse recommendation: TypeError: NetworkError when attempting to fetch resource.(resource://gre/modules/addons/XPIProvider.jsm:200:15) JS Stack trace: awaitPromise@XPIProvider.jsm:200:15
+syncLoadManifest@XPIInstall.jsm:685:22
+updateMetadata@XPIDatabase.jsm:2537:32
+updateExistingAddon@XPIDatabase.jsm:2713:23
+processFileChanges@XPIDatabase.jsm:2789:31
+getNewSideloads@XPIProvider.jsm:2762:28
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E008F,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x35011D,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+1564501602814	Marionette	INFO	Stopped listening on port 42217
+1564501619676	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.LMZ8xEpUIvhr"
+
+(firefox:4770): GLib-GIO-CRITICAL **: 10:47:01.302: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:4770): GLib-GIO-CRITICAL **: 10:47:01.302: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:4770): GLib-GIO-CRITICAL **: 10:47:01.302: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1564501630632	Marionette	INFO	Listening on port 40055
+1564501630752	Marionette	WARN	TLS certificate errors will be ignored for this session
+1564501631024	addons.xpi	WARN	Failed to parse recommendation: TypeError: NetworkError when attempting to fetch resource.(resource://gre/modules/addons/XPIProvider.jsm:200:15) JS Stack trace: awaitPromise@XPIProvider.jsm:200:15
+syncLoadManifest@XPIInstall.jsm:685:22
+updateMetadata@XPIDatabase.jsm:2537:32
+updateExistingAddon@XPIDatabase.jsm:2713:23
+processFileChanges@XPIDatabase.jsm:2789:31
+getNewSideloads@XPIProvider.jsm:2762:28
+1564501661891	Marionette	INFO	Stopped listening on port 40055
+1564501680547	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.9z7vLNKvScx7"
+
+(firefox:5014): GLib-GIO-CRITICAL **: 10:48:02.121: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:5014): GLib-GIO-CRITICAL **: 10:48:02.121: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:5014): GLib-GIO-CRITICAL **: 10:48:02.121: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1564501689735	Marionette	INFO	Listening on port 34203
+1564501689781	Marionette	WARN	TLS certificate errors will be ignored for this session
+1564501690067	addons.xpi	WARN	Failed to parse recommendation: TypeError: NetworkError when attempting to fetch resource.(resource://gre/modules/addons/XPIProvider.jsm:200:15) JS Stack trace: awaitPromise@XPIProvider.jsm:200:15
+syncLoadManifest@XPIInstall.jsm:685:22
+updateMetadata@XPIDatabase.jsm:2537:32
+updateExistingAddon@XPIDatabase.jsm:2713:23
+processFileChanges@XPIDatabase.jsm:2789:31
+getNewSideloads@XPIProvider.jsm:2762:28
+1564501831474	Marionette	INFO	Stopped listening on port 34203
+1564501908464	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.AsFMnSfHRqKR"
+
+(firefox:5377): GLib-GIO-CRITICAL **: 10:51:49.929: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:5377): GLib-GIO-CRITICAL **: 10:51:49.929: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:5377): GLib-GIO-CRITICAL **: 10:51:49.930: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1564501917644	Marionette	INFO	Listening on port 40929
+1564501917684	Marionette	WARN	TLS certificate errors will be ignored for this session
+1564501918155	addons.xpi	WARN	Failed to parse recommendation: TypeError: NetworkError when attempting to fetch resource.(resource://gre/modules/addons/XPIProvider.jsm:200:15) JS Stack trace: awaitPromise@XPIProvider.jsm:200:15
+syncLoadManifest@XPIInstall.jsm:685:22
+updateMetadata@XPIDatabase.jsm:2537:32
+updateExistingAddon@XPIDatabase.jsm:2713:23
+processFileChanges@XPIDatabase.jsm:2789:31
+getNewSideloads@XPIProvider.jsm:2762:28
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x35011D,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E008F,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+1564502146435	Marionette	INFO	Stopped listening on port 40929

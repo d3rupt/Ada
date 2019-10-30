@@ -1,0 +1,145 @@
+Quesadillas:
+Wraps
+Cheese
+Meat
+Taco seasoning
+salad
+
+Smokies:
+Smokies
+Buns
+salad
+
+Enchiladas:
+Cheese
+Chicken
+Wraps
+Tomato sauce
+Chicken stock
+Taco seasoning
+potato salad
+
+Quesadillas:
+Wraps
+Cheese
+Meat
+Taco seasoning
+dumplings
+
+Roast Chicken:
+Chicken
+dumplings
+frozen veg
+
+Burgers:
+Buns
+Ground beef
+Tomatoes
+Lettuce
+Eggs
+Garlic powder
+Milk
+Crackers
+roasted potatoes
+
+Burritos:
+Cheese
+Wraps
+Refried beans
+Mexican rice
+Canned corn
+Chicken
+Taco seasoning
+
+
+Burgers:
+Buns
+Ground beef
+Tomatoes
+Lettuce
+Eggs
+Garlic powder
+Milk
+Crackers
+dumplings
+
+Quesadillas:
+Wraps
+Cheese
+Meat
+Taco seasoning
+dumplings
+
+['milk', '
+', 'bread']
+Thai curry:
+Vegetables
+Curry paste
+Stock
+Chicken, pork, chickpeas or cauliflower
+Coconut milk
+Rice
+fries
+asparagus
+
+Meatloaf:
+Eggs
+Breadcrumbs or ShakenBake mix
+Ground beef
+potato salad
+coleslaw
+
+ShakeNbake:
+Chicken or pork
+perogies
+frozen veg
+
+Peanut chicken stir fry:
+Peanuts
+Peanut butter
+Sriracha
+Lime
+Rice
+Vegetable
+Garlic
+
+
+Hot dogs:
+Hot dog buns
+Hot dogs
+salad
+
+Spaghetti:
+Ground beef
+Tomato sauce
+Mushrooms
+Pasta
+mashed potatoes
+corn
+
+Quesadillas:
+Wraps
+Cheese
+Meat
+Taco seasoning
+roasted potatoes
+
+Pork with apple sauce:
+Pork
+Apple juice or apples
+Thyme
+Butter
+roasted potatoes
+coleslaw
+
+Thai curry:
+Vegetables
+Curry paste
+Stock
+Chicken, pork, chickpeas or cauliflower
+Coconut milk
+Rice
+dumplings
+roasted carrots
+
+['milk']

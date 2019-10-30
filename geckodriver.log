@@ -1,0 +1,757 @@
+1555553435811	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.22tCXPCHRDx5"
+*** You are running in headless mode.
+1555553437016	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1555553437017	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1555553437017	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1555553442118	Marionette	INFO	Listening on port 42407
+1555553442234	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+1555623922538	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.egSChIkcq68o"
+*** You are running in headless mode.
+1555623923684	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1555623923685	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1555623923686	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1555623928582	Marionette	INFO	Listening on port 44177
+1555623928706	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+1559228415631	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.FrfhrMgXHOQo"
+*** You are running in headless mode.
+1559228417732	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1559228417733	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1559228417734	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1559228424963	Marionette	INFO	Listening on port 38319
+1559228425008	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221559174406944%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+1559228615278	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.5ySSEpaw3pUX"
+*** You are running in headless mode.
+1559228616630	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1559228616632	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1559228616632	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1559228622623	Marionette	INFO	Listening on port 38239
+1559228622760	Marionette	WARN	TLS certificate errors will be ignored for this session
+1559228633590	Marionette	INFO	Stopped listening on port 38239
+1559243375190	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ICWK5DvmGSEA"
+*** You are running in headless mode.
+1559243376582	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1559243376583	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1559243376584	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1559243382710	Marionette	INFO	Listening on port 35025
+1559243382785	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221559239845853%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+1559413028986	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.qucK242qwSG6"
+*** You are running in headless mode.
+1559413030642	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1559413030644	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1559413030645	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1559413037548	Marionette	INFO	Listening on port 42697
+1559413037653	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221559347211037%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+1562255408634	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.xCqBESyBKiNO"
+1562255410811	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562255410815	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562255410816	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(firefox:7730): GLib-GIO-CRITICAL **: 10:50:12.909: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:7730): GLib-GIO-CRITICAL **: 10:50:12.913: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:7730): GLib-GIO-CRITICAL **: 10:50:12.913: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562255419029	Marionette	INFO	Listening on port 42647
+1562255419165	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource:///modules/ContentMetaHandler.jsm, line 156: NS_ERROR_ILLEGAL_VALUE: 
+
+(/usr/lib/firefox/firefox:7960): dconf-WARNING **: 10:50:51.244: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562202850012%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+[Parent 7730, Gecko_IOThread] WARNING: pipe error (96): Connection reset by peer: file /build/firefox-9pug44/firefox-67.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+1562255667031	Marionette	INFO	Stopped listening on port 42647
+1562255670118	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.l2j5LfaWGgNq"
+1562255671805	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562255671808	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562255671809	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(firefox:8150): GLib-GIO-CRITICAL **: 10:54:33.920: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:8150): GLib-GIO-CRITICAL **: 10:54:33.923: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:8150): GLib-GIO-CRITICAL **: 10:54:33.923: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562255680034	Marionette	INFO	Listening on port 40247
+1562255680110	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562202850012%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+JavaScript error: https://a.vdo.ai/core/dependencies_multi/vdo.min.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: resource://gre/modules/Sidebar.jsm, line 14: TypeError: window.docShell is null
+JavaScript error: resource://gre/modules/Sidebar.jsm, line 14: TypeError: window.docShell is null
+JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 61: TypeError: this.mm.content is null
+1562255771072	Marionette	INFO	Stopped listening on port 40247
+1562256189562	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "user-data-dir=/home/d3rupt/.mozilla/firefox/6obnlr15.default" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.viGsPiV4iJXy"
+1562256191051	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562256191052	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562256191053	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(firefox:8651): GLib-GIO-CRITICAL **: 11:03:12.862: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:8651): GLib-GIO-CRITICAL **: 11:03:12.862: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:8651): GLib-GIO-CRITICAL **: 11:03:12.862: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562256197420	Marionette	INFO	Listening on port 43639
+1562256197516	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1562256291895	Marionette	INFO	Stopped listening on port 43639
+1562256748847	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.M0B8fweoDHdH"
+
+(firefox:8943): GLib-GIO-CRITICAL **: 11:12:30.238: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:8943): GLib-GIO-CRITICAL **: 11:12:30.239: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:8943): GLib-GIO-CRITICAL **: 11:12:30.239: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562256755843	Marionette	INFO	Listening on port 35569
+1562256755920	Marionette	WARN	TLS certificate errors will be ignored for this session
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+JavaScript error: https://traffic.adxprtz.com/ads/ad/ads.js, line 6: ReferenceError: jQuery is not defined
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onUpdated event fired after context unloaded.
+tabs.onRemoved event fired after context unloaded.
+tabs.onRemoved event fired after context unloaded.
+[Parent 8943, Gecko_IOThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-9pug44/firefox-67.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+1562256784263	Marionette	INFO	Stopped listening on port 35569
+1562256839005	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.AqRJmiwugGp4"
+
+(firefox:9198): GLib-GIO-CRITICAL **: 11:14:00.350: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:9198): GLib-GIO-CRITICAL **: 11:14:00.351: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:9198): GLib-GIO-CRITICAL **: 11:14:00.351: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562256845546	Marionette	INFO	Listening on port 35969
+1562256845583	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://traffic.adxprtz.com/ads/ad/ads.js, line 6: ReferenceError: jQuery is not defined
+JavaScript error: resource:///modules/ContentMetaHandler.jsm, line 156: NS_ERROR_ILLEGAL_VALUE: 
+[Parent 9198, Gecko_IOThread] WARNING: pipe error (101): Connection reset by peer: file /build/firefox-9pug44/firefox-67.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+[Parent 9198, Gecko_IOThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-9pug44/firefox-67.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+1562256873334	Marionette	INFO	Stopped listening on port 35969
+1562256924119	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.NkC1jb7BWbRH"
+
+(firefox:9428): GLib-GIO-CRITICAL **: 11:15:25.477: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:9428): GLib-GIO-CRITICAL **: 11:15:25.477: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:9428): GLib-GIO-CRITICAL **: 11:15:25.478: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562256930890	Marionette	INFO	Listening on port 39837
+1562256931022	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://traffic.adxprtz.com/ads/ad/ads.js, line 6: ReferenceError: jQuery is not defined
+JavaScript error: resource:///modules/ContentMetaHandler.jsm, line 156: NS_ERROR_ILLEGAL_VALUE: 
+[Parent 9428, Gecko_IOThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-9pug44/firefox-67.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+1562256954800	Marionette	INFO	Stopped listening on port 39837
+1562339288513	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.G6fOY0Kz8gEB"
+
+(firefox:10828): GLib-GIO-CRITICAL **: 10:08:09.826: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:10828): GLib-GIO-CRITICAL **: 10:08:09.826: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:10828): GLib-GIO-CRITICAL **: 10:08:09.827: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562339295618	Marionette	INFO	Listening on port 38987
+1562339295752	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/ExtensionCommon.jsm, line 1762: TypeError: data is null
+
+(/usr/lib/firefox/firefox:10881): dconf-WARNING **: 10:08:20.697: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+JavaScript error: https://traffic.adxprtz.com/ads/ad/ads.js, line 6: ReferenceError: jQuery is not defined
+[Parent 10828, Gecko_IOThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-9pug44/firefox-67.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+1562339316473	Marionette	INFO	Stopped listening on port 38987
+1562339376825	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.vYjYR2TD6IIe"
+
+(firefox:11085): GLib-GIO-CRITICAL **: 10:09:38.165: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:11085): GLib-GIO-CRITICAL **: 10:09:38.165: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:11085): GLib-GIO-CRITICAL **: 10:09:38.165: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562339383851	Marionette	INFO	Listening on port 33615
+1562339383900	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://traffic.adxprtz.com/ads/ad/ads.js, line 6: ReferenceError: jQuery is not defined
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+1562339418683	Marionette	INFO	Stopped listening on port 33615
+1562339906250	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.WJVwlEoyWtqY"
+
+(firefox:11586): GLib-GIO-CRITICAL **: 10:18:27.608: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:11586): GLib-GIO-CRITICAL **: 10:18:27.608: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:11586): GLib-GIO-CRITICAL **: 10:18:27.609: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562339913071	Marionette	INFO	Listening on port 39015
+1562339913136	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 11586, Gecko_IOThread] WARNING: pipe error (106): Connection reset by peer: file /build/firefox-9pug44/firefox-67.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+[Parent 11586, Gecko_IOThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-9pug44/firefox-67.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+1562339949585	Marionette	INFO	Stopped listening on port 39015
+1562340194113	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.lFJuHjWWq6Tx"
+
+(firefox:12101): GLib-GIO-CRITICAL **: 10:23:17.008: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:12101): GLib-GIO-CRITICAL **: 10:23:17.008: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:12101): GLib-GIO-CRITICAL **: 10:23:17.008: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562340202837	Marionette	INFO	Listening on port 45581
+1562340202889	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://traffic.adxprtz.com/ads/ad/ads.js, line 6: ReferenceError: jQuery is not defined
+
+(/usr/lib/firefox/firefox:12182): dconf-WARNING **: 10:24:17.131: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+JavaScript error: , line 0: uncaught exception: TagError: adsbygoogle.push() error: Page-level tag does not work inside iframes.
+[Parent 12101, Gecko_IOThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-9pug44/firefox-67.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+1562340594961	Marionette	INFO	Stopped listening on port 45581
+1562340616057	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.IGU5bQn326U8"
+
+(firefox:12800): GLib-GIO-CRITICAL **: 10:30:17.336: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:12800): GLib-GIO-CRITICAL **: 10:30:17.336: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:12800): GLib-GIO-CRITICAL **: 10:30:17.336: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562340622936	Marionette	INFO	Listening on port 36017
+1562340623027	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://traffic.adxprtz.com/ads/ad/ads.js, line 6: ReferenceError: jQuery is not defined
+
+(/usr/lib/firefox/firefox:12851): dconf-WARNING **: 10:30:49.814: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+[Parent 12800, Gecko_IOThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-9pug44/firefox-67.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+1562340662486	Marionette	INFO	Stopped listening on port 36017
+1562510475548	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.kDKonf0MxDpV"
+1562510481649	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562510481650	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562510481651	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(firefox:21373): GLib-GIO-CRITICAL **: 09:41:24.215: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:21373): GLib-GIO-CRITICAL **: 09:41:24.217: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:21373): GLib-GIO-CRITICAL **: 09:41:24.217: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562510493954	Marionette	INFO	Listening on port 41583
+1562510494044	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: moz-extension://f388cccb-05e8-4297-b216-3b340639f44f/background.js, line 503: Error: Could not establish connection. Receiving end does not exist.
+
+(/usr/lib/firefox/firefox:21518): dconf-WARNING **: 09:43:10.629: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+Extension error: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDOMWindowUtils.removeSheetUsingURIString]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://gre/modules/ExtensionCommon.jsm :: runSafeSyncWithoutClone :: line 65"  data: no] undefined 65
+[[Exception stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:65:12
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+Current stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:67:129
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+]]
+1562540415336	Marionette	INFO	Stopped listening on port 41583
+1562540443300	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.s4lUdQUFRMFs"
+1562540444991	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562540445011	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562540445011	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(firefox:22143): GLib-GIO-CRITICAL **: 18:00:46.148: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:22143): GLib-GIO-CRITICAL **: 18:00:46.148: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:22143): GLib-GIO-CRITICAL **: 18:00:46.148: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562540454203	Marionette	INFO	Listening on port 38781
+1562540454321	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://traffic.adxprtz.com/ads/ad/ads.js, line 6: ReferenceError: jQuery is not defined
+
+(/usr/lib/firefox/firefox:22232): dconf-WARNING **: 18:01:01.223: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+Extension error: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDOMWindowUtils.removeSheetUsingURIString]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://gre/modules/ExtensionCommon.jsm :: runSafeSyncWithoutClone :: line 65"  data: no] undefined 65
+[[Exception stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:65:12
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+Current stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:67:129
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+]]
+[Parent 22143, Gecko_IOThread] WARNING: pipe error (65): Connection reset by peer: file /build/firefox-wiDtnw/firefox-67.0.4+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x530005,name=PHttpChannel::Msg_Cancel) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x530024,name=PHttpChannel::Msg_SetPriority) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x1F0001,name=PBrowser::Msg_AsyncMessage) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 94: NS_ERROR_UNEXPECTED: 
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x52000E,name=PHttpBackgroundChannel::Msg___delete__) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x52000E,name=PHttpBackgroundChannel::Msg___delete__) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x52000E,name=PHttpBackgroundChannel::Msg___delete__) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x52000E,name=PHttpBackgroundChannel::Msg___delete__) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x52000E,name=PHttpBackgroundChannel::Msg___delete__) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x52000E,name=PHttpBackgroundChannel::Msg___delete__) Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+1562540467991	Marionette	INFO	Stopped listening on port 38781
+1562540529052	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.QfTMfkHctUlV"
+
+(firefox:22733): GLib-GIO-CRITICAL **: 18:02:11.506: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:22733): GLib-GIO-CRITICAL **: 18:02:11.506: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:22733): GLib-GIO-CRITICAL **: 18:02:11.506: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562540538741	Marionette	INFO	Listening on port 43825
+1562540538796	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+[Parent 22733, Gecko_IOThread] WARNING: pipe error (129): Connection reset by peer: file /build/firefox-wiDtnw/firefox-67.0.4+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+1562540540695	Marionette	INFO	Stopped listening on port 43825
+1562540585112	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.B95LheoEoWPQ"
+
+(firefox:23015): GLib-GIO-CRITICAL **: 18:03:07.291: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:23015): GLib-GIO-CRITICAL **: 18:03:07.291: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:23015): GLib-GIO-CRITICAL **: 18:03:07.292: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562540592892	Marionette	INFO	Listening on port 43391
+1562540592917	Marionette	WARN	TLS certificate errors will be ignored for this session
+Extension error: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDOMWindowUtils.removeSheetUsingURIString]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://gre/modules/ExtensionCommon.jsm :: runSafeSyncWithoutClone :: line 65"  data: no] undefined 65
+[[Exception stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:65:12
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+Current stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:67:129
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+]]
+[Parent 23015, Gecko_IOThread] WARNING: pipe error (103): Connection reset by peer: file /build/firefox-wiDtnw/firefox-67.0.4+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+[Parent 23015, Gecko_IOThread] WARNING: pipe error (65): Connection reset by peer: file /build/firefox-wiDtnw/firefox-67.0.4+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+1562540627069	Marionette	INFO	Stopped listening on port 43391
+1562540890829	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.60NkNRlb2whw"
+
+(firefox:23491): GLib-GIO-CRITICAL **: 18:08:13.170: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:23491): GLib-GIO-CRITICAL **: 18:08:13.170: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:23491): GLib-GIO-CRITICAL **: 18:08:13.171: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562540898869	Marionette	INFO	Listening on port 46759
+1562540898939	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: moz-extension://f388cccb-05e8-4297-b216-3b340639f44f/background.js, line 503: Error: Could not establish connection. Receiving end does not exist.
+Extension error: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDOMWindowUtils.removeSheetUsingURIString]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://gre/modules/ExtensionCommon.jsm :: runSafeSyncWithoutClone :: line 65"  data: no] undefined 65
+[[Exception stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:65:12
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+Current stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:67:129
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+]]
+[Parent 23491, Gecko_IOThread] WARNING: pipe error (65): Connection reset by peer: file /build/firefox-wiDtnw/firefox-67.0.4+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+[Parent 23491, Gecko_IOThread] WARNING: pipe error (112): Connection reset by peer: file /build/firefox-wiDtnw/firefox-67.0.4+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+[Parent 23491, Gecko_IOThread] WARNING: pipe error (89): Connection reset by peer: file /build/firefox-wiDtnw/firefox-67.0.4+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+1562540926067	Marionette	INFO	Stopped listening on port 46759
+1562543251828	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.EuZnl3iMMLnB"
+
+(firefox:24217): GLib-GIO-CRITICAL **: 18:47:34.209: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:24217): GLib-GIO-CRITICAL **: 18:47:34.209: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:24217): GLib-GIO-CRITICAL **: 18:47:34.209: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562543260088	Marionette	INFO	Listening on port 39223
+1562543260130	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://traffic.adxprtz.com/ads/ad/ads.js, line 6: ReferenceError: jQuery is not defined
+Extension error: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDOMWindowUtils.removeSheetUsingURIString]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://gre/modules/ExtensionCommon.jsm :: runSafeSyncWithoutClone :: line 65"  data: no] undefined 65
+[[Exception stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:65:12
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+shutdownExtension@resource://gre/modules/ExtensionContent.jsm:912:17
+shutdownExtension@resource://gre/modules/ExtensionContent.jsm:960:21
+shutdown@resource://gre/modules/ExtensionChild.jsm:747:22
+receiveMessage@resource://gre/modules/ExtensionProcessScript.jsm:262:38
+Current stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:67:129
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+shutdownExtension@resource://gre/modules/ExtensionContent.jsm:912:17
+shutdownExtension@resource://gre/modules/ExtensionContent.jsm:960:21
+shutdown@resource://gre/modules/ExtensionChild.jsm:747:22
+receiveMessage@resource://gre/modules/ExtensionProcessScript.jsm:262:38
+]]
+[Parent 24217, Gecko_IOThread] WARNING: pipe error (110): Connection reset by peer: file /build/firefox-wiDtnw/firefox-67.0.4+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+[Parent 24217, Gecko_IOThread] WARNING: pipe error (65): Connection reset by peer: file /build/firefox-wiDtnw/firefox-67.0.4+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+1562543296004	Marionette	INFO	Stopped listening on port 39223
+1562543607042	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.luuf0XnEQjFm"
+
+(firefox:24684): GLib-GIO-CRITICAL **: 18:53:29.606: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:24684): GLib-GIO-CRITICAL **: 18:53:29.609: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:24684): GLib-GIO-CRITICAL **: 18:53:29.609: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562543619321	Marionette	INFO	Listening on port 42239
+1562543619406	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://traffic.adxprtz.com/ads/ad/ads.js, line 6: ReferenceError: jQuery is not defined
+JavaScript error: , line 0: uncaught exception: TagError: adsbygoogle.push() error: Page-level tag does not work inside iframes.
+Extension error: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDOMWindowUtils.removeSheetUsingURIString]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://gre/modules/ExtensionCommon.jsm :: runSafeSyncWithoutClone :: line 65"  data: no] undefined 65
+[[Exception stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:65:12
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+Current stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:67:129
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+]]
+[Parent 24684, Gecko_IOThread] WARNING: pipe error (74): Connection reset by peer: file /build/firefox-wiDtnw/firefox-67.0.4+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+1562543893098	Marionette	INFO	Stopped listening on port 42239
+1562544495659	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.FWc2efTNuOSb"
+
+(firefox:25219): GLib-GIO-CRITICAL **: 19:08:17.821: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:25219): GLib-GIO-CRITICAL **: 19:08:17.821: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:25219): GLib-GIO-CRITICAL **: 19:08:17.821: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562544503579	Marionette	INFO	Listening on port 33047
+1562544503642	Marionette	WARN	TLS certificate errors will be ignored for this session
+Extension error: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDOMWindowUtils.removeSheetUsingURIString]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://gre/modules/ExtensionCommon.jsm :: runSafeSyncWithoutClone :: line 65"  data: no] undefined 65
+[[Exception stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:65:12
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+Current stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:67:129
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+]]
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+1562544597901	Marionette	INFO	Stopped listening on port 33047
+1562549033395	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ew3see4zFdFd"
+
+(firefox:25862): GLib-GIO-CRITICAL **: 20:23:55.526: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:25862): GLib-GIO-CRITICAL **: 20:23:55.527: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:25862): GLib-GIO-CRITICAL **: 20:23:55.527: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562549041054	Marionette	INFO	Listening on port 39259
+1562549041158	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://traffic.adxprtz.com/ads/ad/ads.js, line 6: ReferenceError: jQuery is not defined
+Extension error: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDOMWindowUtils.removeSheetUsingURIString]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://gre/modules/ExtensionCommon.jsm :: runSafeSyncWithoutClone :: line 65"  data: no] undefined 65
+[[Exception stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:65:12
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+Current stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:67:129
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+]]
+JavaScript error: , line 0: uncaught exception: TagError: adsbygoogle.push() error: Page-level tag does not work inside iframes.
+JavaScript error: , line 0: uncaught exception: TagError: adsbygoogle.push() error: Page-level tag does not work inside iframes.
+JavaScript error: , line 0: uncaught exception: TagError: adsbygoogle.push() error: Page-level tag does not work inside iframes.
+JavaScript error: , line 0: uncaught exception: TagError: adsbygoogle.push() error: Page-level tag does not work inside iframes.
+JavaScript error: , line 0: uncaught exception: TagError: adsbygoogle.push() error: Page-level tag does not work inside iframes.
+1562549882101	Marionette	ERROR	[4294967315] No reply from Marionette:Register
+JavaScript error: chrome://marionette/content/listener.js, line 453: TypeError: reply[0] is undefined
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+Extension error: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDOMWindowUtils.removeSheetUsingURIString]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://gre/modules/ExtensionCommon.jsm :: runSafeSyncWithoutClone :: line 65"  data: no] undefined 65
+[[Exception stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:65:12
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+Current stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:67:129
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+]]
+[Parent 25862, Gecko_IOThread] WARNING: pipe error (65): Connection reset by peer: file /build/firefox-wiDtnw/firefox-67.0.4+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+1562549883954	Marionette	INFO	Stopped listening on port 39259
+1562560125101	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.0VAsolmTvJIh"
+
+(firefox:27360): GLib-GIO-CRITICAL **: 23:28:47.571: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:27360): GLib-GIO-CRITICAL **: 23:28:47.572: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:27360): GLib-GIO-CRITICAL **: 23:28:47.572: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562560134866	Marionette	INFO	Listening on port 44513
+1562560134944	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://traffic.adxprtz.com/ads/ad/ads.js, line 6: ReferenceError: jQuery is not defined
+Extension error: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDOMWindowUtils.removeSheetUsingURIString]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://gre/modules/ExtensionCommon.jsm :: runSafeSyncWithoutClone :: line 65"  data: no] undefined 65
+[[Exception stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:65:12
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+Current stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:67:129
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+]]
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+1562560225964	Marionette	INFO	Stopped listening on port 44513
+1562560478830	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.hEzyxi7V6ae2"
+
+(firefox:27782): GLib-GIO-CRITICAL **: 23:34:41.319: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:27782): GLib-GIO-CRITICAL **: 23:34:41.320: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:27782): GLib-GIO-CRITICAL **: 23:34:41.320: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562560487830	Marionette	INFO	Listening on port 35873
+1562560487870	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://traffic.adxprtz.com/ads/ad/ads.js, line 6: ReferenceError: jQuery is not defined
+JavaScript error: , line 0: uncaught exception: TagError: adsbygoogle.push() error: Page-level tag does not work inside iframes.
+1562560906570	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.uu7PiJ00QYIR"
+
+(firefox:28119): GLib-GIO-CRITICAL **: 23:41:48.943: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:28119): GLib-GIO-CRITICAL **: 23:41:48.944: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:28119): GLib-GIO-CRITICAL **: 23:41:48.944: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+1562560914657	Marionette	INFO	Listening on port 45327
+1562560914755	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://traffic.adxprtz.com/ads/ad/ads.js, line 6: ReferenceError: jQuery is not defined
+Extension error: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDOMWindowUtils.removeSheetUsingURIString]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://gre/modules/ExtensionCommon.jsm :: runSafeSyncWithoutClone :: line 65"  data: no] undefined 65
+[[Exception stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:65:12
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+Current stack
+runSafeSyncWithoutClone@resource://gre/modules/ExtensionCommon.jsm:67:129
+cleanup@resource://gre/modules/ExtensionContent.jsm:353:11
+close@resource://gre/modules/ExtensionContent.jsm:814:14
+inner-window-destroyed@resource://gre/modules/ExtensionContent.jsm:889:19
+observe@resource://gre/modules/ExtensionContent.jsm:905:27
+]]
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0088,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x360113,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+1562560964753	Marionette	INFO	Stopped listening on port 45327
