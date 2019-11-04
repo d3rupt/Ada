@@ -6,7 +6,6 @@ while 1:
     p = []
     os.chdir('/home/d3rupt/Projects/Ada/startup')
     r
-    r
     for process in psutil.process_iter():
         if 'python3' in process:
             p.append(process.cmdline())
@@ -22,7 +21,7 @@ while 1:
         if pr not in p:
             Pr = pr[1].upper()
             Popen(pr)
-            print('|---' + Pr[0:-3] + ' INITIALIZED---|\n--\n')
+            print('|---' + Pr[0:-3] + ' INITIALIZED---|')
         else:
             pass
             
