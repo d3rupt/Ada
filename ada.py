@@ -8,17 +8,14 @@ import random
 import wolframalpha
 import selenium.webdriver as webdriver
 from selenium.webdriver.firefox.options import Options
-#import gmusicapi
-#import forDinner as menu
 from playsound import playsound
-#from flask import Flask
 from datetime import datetime
 from pyowm import OWM
 from pyowm.caches.lrucache import LRUCache
 from email.mime.text import MIMEText
 #import psutil
+import pychromecast
 from tqdm import tqdm
-#app = Flask(__name__)
 
 #==============================================================================#
 #----------------------Database------------------------------------------------#
@@ -167,7 +164,7 @@ menu = {
 #==============================================================================#
 #----------------------------------Variables-----------------------------------#
 #==============================================================================#
-
+shoppingList = 'shoppingList.txt'
 
 #==============================================================================#		
 #--------------------------Eyes and ears---------------------------------------#
@@ -209,6 +206,7 @@ def deeper():
 #==============================================================================#
 #----------------------------------Her brains----------------------------------#
 #==============================================================================#
+
 def play(sound): #catch all play sound function
 	os.system('mpg321 {}'.format(sound))
 	
@@ -220,6 +218,7 @@ def deeper():
 def forDinner():	 #meal planning
 		tonight = menu.keys()
 		tonight = random.sample(tonight, 4)
+		#mnu = "How about {}, and {}?".format(for t in tonight[0:-1], tonight[-1]) 
 		mnu = "How about " + tonight[0] + ", " + tonight[1] + ", " + tonight[2] + ", and " + tonight[3] + "?"
 		print(mnu)
 		deeper()
@@ -369,7 +368,74 @@ def addToList():
 #==============================================================================#
 #-----------------------Home automation----------------------------------------#
 #==============================================================================#
+def lightControl():
+	lamp = ''
+	tv = ''
+	beacon = ''
+	on = '/on'
+	off = '/off'
+	if 'lamp' in data:
+		if 'turn on' in data:
+			play(gotIt)
+			requests.get(lamp + on)
+		elif 'turn off' in data:
+			play(gotIt)
+			requests.get(lamp + off)
+			
+	elif 'tv' in data:
+		if 'turn on' in data:
+			play(gotIt)
+			requests.get(tv + on)
+		elif 'turn off' in data:
+			play(gotIt)
+			requests.get(tv + off)
+			
+	elif 'bedtime' in data:
+		pass
 		
+	elif 'beacon' in data:
+		pass
+		
+mc = cast.media_controller
+vol = cast.status.volume_level
+	
+def castPause():
+	mc.pause()
+		
+def castPlay():
+	mc.play()
+		
+def setVol():
+	data = data.split(' ')
+	i = int(data[4])
+	print(data)
+	print('data:' + data[4])
+	if i in range(100):
+			i = i / 100
+			print('i divided by 100: ' + i)
+			cast.set_volume(i)
+			print('volume:' + str(vol))
+	else:
+		play(fail)
+			
+def volUp():
+		if vol < 1.0:
+			cast.set_volume(vol + 0.2)
+			print('vol:' + str(vol))
+		else:
+			play(fail)
+def volDown():
+		if vol > 0.0:
+			cast.set_volume(vol - 0.2)
+			print(vol)
+		else:
+			play(fail)
+						
+def volLevel():
+		speak(str(vol * 100) + ' percent') 
+		print(vol)
+			
+	
 #==============================================================================#		
 #-------------------------Do shit----------------------------------------------#
 #==============================================================================#
@@ -440,9 +506,30 @@ def ada(data):
 		pass
 
 	#elif e _ 'where am I' in data:
+#----------Media---------------------------------------------------------------#
+
+	elif e + 'set volume to' in data:
+		setVol()
 		
-	elif e and "there\'s no more" in data:
-		gotIt
+	elif e + 'turn it up' in data:
+		volUp()
+	
+	elif e + 'turn it down' in data:
+		volDown()
+		
+	elif e + 'how loud' in data:
+		volLevel()
+		
+	elif e + 'press play' in data:
+		castPlay()
+		
+	elif e + 'pause' in data:
+		castPause()
+		
+#----------Food & shopping-----------------------------------------------------#
+	
+	elif e + "there\'s no more" in data:
+		play(gotIt)
 		addToList()
 		
 	elif e + "send the shopping list" in data:
@@ -454,7 +541,7 @@ def ada(data):
 		speak("Lazarus protocol initiated")
 		
 	elif e + "tell me" in data:
-		gotIt
+		play(gotIt)
 		try:
 			wolframThisShit()
 		except:
@@ -468,9 +555,10 @@ def ada(data):
 						googleSearch()
 					except:
 						speak('Sorry, nothing found.')
+						
 		
 	elif e + 'what\'s it like out' in data:
-		gotIt
+		play(gotIt)
 		weather()
 
 		
@@ -500,17 +588,24 @@ def ada(data):
 #==============================================================================#
 
 time.sleep(2)
-play('startup.ogg')
-proc = []
-for process in tqdm(psutil.process_iter()):
-	proc.append(process.cmdLine()))
-	print(process.ccmdLine())
-	
-startup = ['python3', 'startup.py']
-if startup not in  proc:
-	Popen(startup)
-else:
-	pass
+play('./audio/sys/startup.ogg')
+
+chromecasts = pychromecast.get_chromecasts() #start chromecast control
+[cc.device.friendly_name for cc in chromecasts]
+cast = next(	cc for cc in chromecasts if cc.device.friendly_name == 'Family room TV')
+cast.wait()
+
+# proc = [] #gather processes for startup
+# for process in tqdm(psutil.process_iter()):
+# 	proc.append(process.cmdLine())
+# 	print(process.ccmdLine())	
+# startup = ['python3', 'startup.py']
+# if startup not in  proc:
+# 	Popen(startup)
+# else:
+# 	pass
+
+
 	
 while 1:
 	reply = ''
