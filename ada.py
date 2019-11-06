@@ -440,7 +440,6 @@ def volLevel():
 #-------------------------Do shit----------------------------------------------#
 #==============================================================================#
 
-
 def ada(data):
 	talk = os.chdir('./audio')
 	dtalk = os.chdir('..')
@@ -480,31 +479,28 @@ def ada(data):
 
 		pass
 		
-	elif e + 'flip a coin' in data:
-		while 1:
-			coin = []
-			coin = random.choice(['heads.mp3', 'tails.mp3'])
-			time.sleep(3)
-			talk
-			speak(coin)
-			play('Goagain?.mp3')
-			dtalk
-			data = recordAudio()
-			data
-			data = data.split(' ')
-			if data in yip:
-				continue
-			elif data in nupe:
-				talk
-				play('Finethen.mp3')
-				dtalk
-			break
+#----------Info----------------------------------------------------------------#
 		
 	elif e + "what time is it" in data:
 		gotIt
 		speak("It's " + now.strftime('%-I:%-M'))
 		pass
 
+	elif e + "tell me" in data:
+		play(gotIt)
+		try:
+			wolframThisShit()
+		except:
+			speak('Nothing found. Want me to google it?')
+			while 1:
+				data = recordAudio()
+				data
+				data = data.split()
+				if data == 'Yes':
+					try:
+						googleSearch()
+					except:
+						speak('Sorry, nothing found.')
 	#elif e _ 'where am I' in data:
 #----------Media---------------------------------------------------------------#
 
@@ -534,37 +530,42 @@ def ada(data):
 		
 	elif e + "send the shopping list" in data:
 		ShoppingList()
+
+	elif e + 'meal plan time' in data:
+		play(gotIt)
+		forDinner()
 		
+#----------Misc----------------------------------------------------------------#
+
 	elif e + "initiate Lazarus protocol" in data:
 		gotIt
 		email(email='monkay03@hotmail.com', content='<3')
 		speak("Lazarus protocol initiated")
-		
-	elif e + "tell me" in data:
-		play(gotIt)
-		try:
-			wolframThisShit()
-		except:
-			speak('Nothing found. Want me to google it?')
-			while 1:
-				data = recordAudio()
-				data
-				data = data.split()
-				if data == 'Yes':
-					try:
-						googleSearch()
-					except:
-						speak('Sorry, nothing found.')
-						
+
+	elif e + 'flip a coin' in data:
+		while 1:
+			coin = []
+			coin = random.choice(['heads.mp3', 'tails.mp3'])
+			time.sleep(3)
+			talk
+			speak(coin)
+			play('Goagain?.mp3')
+			dtalk
+			data = recordAudio()
+			data
+			data = data.split(' ')
+			if data in yip:
+				continue
+			elif data in nupe:
+				talk
+				play('Finethen.mp3')
+				dtalk
+			break						
 		
 	elif e + 'what\'s it like out' in data:
 		play(gotIt)
 		weather()
 
-		
-	elif e + 'meal plan time' in data:
-		play(gotIt)
-		forDinner()
 		
 	elif e + 'bedtime' in data:
 		requests.get('https://192.168.100.124/RELAY=ON')
