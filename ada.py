@@ -165,7 +165,10 @@ menu = {
 #----------------------------------Variables-----------------------------------#
 #==============================================================================#
 shoppingList = 'shoppingList.txt'
-
+gotIt = './audio/sys/light.ogg'
+fail = '/audio/sys/botwfail.flac'
+yip = ['yes', 'yeah', 'sounds good', 'ok', 'sure']
+nupe = ['no', 'nope', 'noop', 'nah', 'no way']
 #==============================================================================#		
 #--------------------------Eyes and ears---------------------------------------#
 #==============================================================================#
@@ -196,52 +199,59 @@ def recordAudio():
 		print("Could not request results from Google Speech Recognition service; {0}".format(e))
 	return data
 
-def deeper():
-	while 1:
-		data = recordAudio()
-		data
-		data.split('')
-		return data
-
 #==============================================================================#
 #----------------------------------Her brains----------------------------------#
 #==============================================================================#
 
 def play(sound): #catch all play sound function
-	os.system('mpg321 {}'.format(sound))
+	os.system('mpg321 gain 100 {}'.format(sound))
 	
 def deeper():
 	data  = recordAudio()
 	while 1:
 		data
-	return data
+		
 def forDinner():	 #meal planning
+	tryAgain = True
+	while tryAgain == True:
 		tonight = menu.keys()
 		tonight = random.sample(tonight, 4)
 		#mnu = "How about {}, and {}?".format(for t in tonight[0:-1], tonight[-1]) 
 		mnu = "How about " + tonight[0] + ", " + tonight[1] + ", " + tonight[2] + ", and " + tonight[3] + "?"
 		print(mnu)
-		deeper()
-		if data in nupe:
-			print('Ok, trying again.')
-			pass
+		while 1:
+			data  = recordAudio()
+			data
+			if data in nupe:
+				print('Ok, trying again.')
 			
-		elif data in yip:
-			s = open('shoppingList.txt', 'w')
-			for i in tonight:
-				s.append(i)
-			s.close()
-			print('OK, added to the shopping list. Want me to send it now?')
-			while 1:
-				data = input('...')
-				if data in yip:
-					print('sending it now')
-					shoppingList()
-				elif data in nupe:
-					print('Ok then.')
+			elif data in yip:
+				s = open(shoppingList, 'a+')
+				for i in tonight:
+					s.write(i)
+				s.close()
+				tryAgain = False
+				print('OK, added to the shopping list. Want me to send it now?')
+				while 1:
+					data = input('...')
+					if data in yip:
+						print('sending it now')
+						shoppingList()
+						break
+
+					elif data in nupe:
+						print('Ok then.')
+						break
+			elif 'keep' in data:
+				data = data.split(' ')
+				if 'and' in data:
+					keep = data
+			else:
+				continue
+			break
 
 def ShoppingList():
-	gotIt
+	play(gotIt)
 	play('Voiceverificationrequired.mp3')
 	while 1:
 		#data = recordAudio()
@@ -395,9 +405,6 @@ def lightControl():
 		
 	elif 'beacon' in data:
 		pass
-		
-mc = cast.media_controller
-vol = cast.status.volume_level
 	
 def castPause():
 	mc.pause()
@@ -443,18 +450,13 @@ def volLevel():
 def ada(data):
 	talk = os.chdir('./audio')
 	dtalk = os.chdir('..')
-	yip = ['yes', 'yeah', 'sounds good', 'ok']
-	nupe = ['no', 'nope', 'noop', 'nah', 'no way']
 	reply = './audio/replies/' + random.choice(os.listdir('./audio/replies/'))
-	gotIt = './audio/sys/light.ogg'
-	fail = './audio/sys/botwfail.flac'
-	shoppingList = 'shoppingList.txt'
 	now = datetime.now()
 	e = 'Ada '
 	check = ['Ada you there', 'Ada you up', 'Oh Ada']
 	#try:
 	if data in check:
-		gotIt
+		play(gotIt)
 		morn = play('./audio/Goodmorning..mp3 ')
 		aft = play('./audio/Goodafternoon..mp3')
 		eve = play('./audio/Goodevening.mp3')
@@ -482,7 +484,7 @@ def ada(data):
 #----------Info----------------------------------------------------------------#
 		
 	elif e + "what time is it" in data:
-		gotIt
+		play(gotIt)
 		speak("It's " + now.strftime('%-I:%-M'))
 		pass
 
@@ -502,6 +504,7 @@ def ada(data):
 					except:
 						speak('Sorry, nothing found.')
 	#elif e _ 'where am I' in data:
+	
 #----------Media---------------------------------------------------------------#
 
 	elif e + 'set volume to' in data:
@@ -538,7 +541,7 @@ def ada(data):
 #----------Misc----------------------------------------------------------------#
 
 	elif e + "initiate Lazarus protocol" in data:
-		gotIt
+		play(gotIt)
 		email(email='monkay03@hotmail.com', content='<3')
 		speak("Lazarus protocol initiated")
 
@@ -595,6 +598,8 @@ chromecasts = pychromecast.get_chromecasts() #start chromecast control
 [cc.device.friendly_name for cc in chromecasts]
 cast = next(	cc for cc in chromecasts if cc.device.friendly_name == 'Family room TV')
 cast.wait()
+mc = cast.media_controller
+vol = cast.status.volume_level
 
 # proc = [] #gather processes for startup
 # for process in tqdm(psutil.process_iter()):
