@@ -38,8 +38,7 @@ menu = {
 'Mexican rice\n',
 'Canned corn\n',
 'Chicken\n',
-'Taco seasoning\n',
-'no side\n'],
+'Taco seasoning\n'],
 
 'Enchiladas':
 ['Cheese\n',
@@ -47,8 +46,8 @@ menu = {
 'Wraps\n',
 'Tomato sauce\n',
 'Chicken stock\n',
-'Taco seasoning\n',
-'summer\n'],
+'Taco seasoning\n'
+],
 
 'Sheperds pie':
 ['Potatoes\n',
@@ -56,8 +55,8 @@ menu = {
 'Creamed corn\n',
 'Veggies\n',
 'Brown gravy\n',
-'Milk\n',
-'no side\n'],
+'Milk\n'
+],
 
 'Meatloaf':
 ['Eggs\n',
@@ -71,29 +70,29 @@ menu = {
 'Eggs\n',
 'Soy sauce\n',
 'Hot sauce\n',
-'Meat\n',
-'no side\n'],
+'Meat\n'
+],
 
 'Quesadillas':
 ['Wraps\n',
 'Cheese\n',
 'Meat\n',
-'Taco seasoning\n',
-'summer\n'],
+'Taco seasoning\n'
+],
 
 'Mac n cheese':
 ['Pasta\n',
 'Cheese\n',
 'Milk\n',
 'Flour\n',
-'Additions (Bacon, meat, veggies, etc)\n',
-'no side\n'],
+'Additions (Bacon, meat, veggies, etc)\n'
+],
 
 
 'Smokies':
 ['Smokies\n',
-'Buns\n',
-'summer\n'],
+'Buns\n'
+],
 
 'Burgers':
 ['Buns\n',
@@ -103,8 +102,8 @@ menu = {
 'Eggs\n',
 'Garlic powder\n',
 'Milk\n',
-'Crackers\n',
-'summer\n'],
+'Crackers\n'
+],
 
 'Peanut chicken stir fry':
 ['Peanuts\n',
@@ -113,13 +112,13 @@ menu = {
 'Lime\n',
 'Rice\n',
 'Vegetable\n',
-'Garlic\n',
-'no side\n'],
+'Garlic\n'
+],
 
 'Hot dogs':
 ['Hot dog buns\n',
-'Hot dogs\n',
-'summer\n'],
+'Hot dogs\n'
+],
 
 'Pork with apple sauce':
 ['Pork\n',
@@ -136,7 +135,7 @@ menu = {
 'Ground beef\n',
 'Tostitos\n',
 'Avocado\n'
-'no side\n'],
+],
 
 'Thai curry':
 ['Vegetables\n',
@@ -146,7 +145,7 @@ menu = {
 'Coconut milk\n',
 'Rice\n',
 'Lime\n'
-'no side\n'],
+],
 	
 'ShakeNbake':
 ['Chicken or pork\n',
@@ -204,7 +203,7 @@ def recordAudio():
 #==============================================================================#
 
 def play(sound): #catch all play sound function
-	os.system('mpg321 gain 100 {}'.format(sound))
+	os.system('mpg321 {}'.format(sound))
 	
 def deeper():
 	data  = recordAudio()
@@ -213,14 +212,15 @@ def deeper():
 		
 def forDinner():	 #meal planning
 	tryAgain = True
+	tonight = menu.keys()
+	tonight = random.sample(tonight, 4)
 	while tryAgain == True:
-		tonight = menu.keys()
-		tonight = random.sample(tonight, 4)
 		#mnu = "How about {}, and {}?".format(for t in tonight[0:-1], tonight[-1]) 
 		mnu = "How about " + tonight[0] + ", " + tonight[1] + ", " + tonight[2] + ", and " + tonight[3] + "?"
 		print(mnu)
 		while 1:
-			data  = recordAudio()
+			#data  = recordAudio()
+			data = input('...')
 			data
 			if data in nupe:
 				print('Ok, trying again.')
@@ -228,7 +228,9 @@ def forDinner():	 #meal planning
 			elif data in yip:
 				s = open(shoppingList, 'a+')
 				for i in tonight:
-					s.write(i)
+					s.write(i + ':\n\n')
+					for j in menu.get(i):
+						s.write(j)
 				s.close()
 				tryAgain = False
 				print('OK, added to the shopping list. Want me to send it now?')
@@ -236,16 +238,32 @@ def forDinner():	 #meal planning
 					data = input('...')
 					if data in yip:
 						print('sending it now')
-						shoppingList()
+						ShoppingList()
 						break
 
 					elif data in nupe:
 						print('Ok then.')
 						break
+						
 			elif 'keep' in data:
 				data = data.split(' ')
+				keep = data[1:-1]
 				if 'and' in data:
-					keep = data
+					del keep[-2]
+					tonight = []
+					for k in keep:
+						tonight.append(k)
+					while len(tonight) < 4:
+						choice = menu.keys()
+						choice1 = ''
+						choice1 = random.sample(choice, 1)
+						if random.sample(choice, 1) not in tonight:
+							tonight.append(choice1)
+						else:
+							pass
+					
+
+						
 			else:
 				continue
 			break
@@ -278,7 +296,7 @@ def ShoppingList():
 			
 			list1 = MIMEText(list1, 'html')
 			email(email=emails.get(data), content=list1.as_string())
-			play(firm)
+			play(reply)
 		
 		else:
 			play('botwfail.flac')
@@ -594,12 +612,12 @@ def ada(data):
 time.sleep(2)
 play('./audio/sys/startup.ogg')
 
-chromecasts = pychromecast.get_chromecasts() #start chromecast control
-[cc.device.friendly_name for cc in chromecasts]
-cast = next(	cc for cc in chromecasts if cc.device.friendly_name == 'Family room TV')
-cast.wait()
-mc = cast.media_controller
-vol = cast.status.volume_level
+# chromecasts = pychromecast.get_chromecasts() #start chromecast control
+# [cc.device.friendly_name for cc in chromecasts]
+# cast = next(	cc for cc in chromecasts if cc.device.friendly_name == 'Family room TV')
+# cast.wait()
+# mc = cast.media_controller
+# vol = cast.status.volume_level
 
 # proc = [] #gather processes for startup
 # for process in tqdm(psutil.process_iter()):
