@@ -16,7 +16,7 @@ from email.mime.text import MIMEText
 #import psutil
 import pychromecast
 from tqdm import tqdm
-
+import re
 #==============================================================================#
 #----------------------Database------------------------------------------------#
 #==============================================================================#
@@ -28,135 +28,139 @@ emails = {
 
 menu = {
 	
-'Roast Chicken':
-'Chicken\n\n',
+'chicken':
+'chicken\n\n',
 
-'Burritos':
-['Cheese\n',
-'Wraps\n',
-'Refried beans\n',
-'Mexican rice\n',
-'Canned corn\n',
-'Chicken\n',
-'Taco seasoning\n'],
+'burritos':
+['cheese\n',
+'wraps\n',
+'refried beans\n',
+'mexican rice\n',
+'canned corn\n',
+'chicken\n',
+'taco seasoning\n'],
 
-'Enchiladas':
-['Cheese\n',
-'Chicken\n',
-'Wraps\n',
-'Tomato sauce\n',
-'Chicken stock\n',
-'Taco seasoning\n'
+'enchiladas':
+['cheese\n',
+'chicken\n',
+'wraps\n',
+'tomato sauce\n',
+'chicken stock\n',
+'taco seasoning\n'
 ],
 
-'Sheperds pie':
-['Potatoes\n',
-'Ground beef\n',
-'Creamed corn\n',
-'Veggies\n',
-'Brown gravy\n',
-'Milk\n'
+'shepherds pie':
+['potatoes\n',
+'ground beef\n',
+'creamed corn\n',
+'veggies\n',
+'brown gravy\n',
+'milk\n'
 ],
 
-'Meatloaf':
-['Eggs\n',
-'Breadcrumbs or ShakenBake mix\n',
-'Ground beef\n',
-'BBQ sauce\n'],
+'meatloaf':
+['eggs\n',
+'breadcrumbs or ShakenBake mix\n',
+'ground beef\n',
+'bbq sauce\n'],
 
-'Stir fry':
-['Veggies\n',
-'Rice\n',
-'Eggs\n',
-'Soy sauce\n',
-'Hot sauce\n',
-'Meat\n'
+'stir fry':
+['veggies\n',
+'rice\n',
+'eggs\n',
+'soy sauce\n',
+'hot sauce\n',
+'meat\n'
 ],
 
-'Quesadillas':
-['Wraps\n',
-'Cheese\n',
-'Meat\n',
-'Taco seasoning\n'
+'quesadillas':
+['wraps\n',
+'cheese\n',
+'meat\n',
+'taco seasoning\n'
 ],
 
-'Mac n cheese':
-['Pasta\n',
-'Cheese\n',
-'Milk\n',
-'Flour\n',
-'Additions (Bacon, meat, veggies, etc)\n'
+'mac and cheese':
+['pasta\n',
+'cheese\n',
+'milk\n',
+'flour\n',
+'additions (bacon, meat, veggies, etc)\n'
 ],
 
 
-'Smokies':
-['Smokies\n',
-'Buns\n'
+'smokies':
+['smokies\n',
+'buns\n'
 ],
 
-'Burgers':
-['Buns\n',
-'Ground beef\n',
-'Tomatoes\n',
-'Lettuce\n',
-'Eggs\n',
-'Garlic powder\n',
-'Milk\n',
-'Crackers\n'
+'burgers':
+['buns\n',
+'ground beef\n',
+'tomatoes\n',
+'lettuce\n',
+'eggs\n',
+'garlic powder\n'
 ],
 
-'Peanut chicken stir fry':
-['Peanuts\n',
-'Peanut butter\n',
-'Sriracha\n',
-'Lime\n',
-'Rice\n',
-'Vegetable\n',
-'Garlic\n'
+'peanut chicken stir fry':
+['peanut butter\n',
+'sriracha\n',
+'lime\n',
+'rice\n',
+'vegetable\n',
+'garlic\n'
 ],
 
-'Hot dogs':
-['Hot dog buns\n',
-'Hot dogs\n'
+'hot dogs':
+['hot dog buns\n',
+'hot dogs\n'
 ],
 
-'Pork with apple sauce':
-['Pork\n',
-'Apple juice or apples\n',
-'Thyme\n'
-'Butter\n',
-'Stock\n'],
+'pork with apple sauce':
+['pork\n',
+'apple juice or apples\n',
+'thyme\n'
+'butter\n',
+'stock\n'],
 	
-'Taco salad':
-['Lettuce\n',
-'Tomato\n',
-'Cheese\n',
-'Catalina\n',
-'Ground beef\n',
-'Tostitos\n',
-'Avocado\n'
+'taco salad':
+['lettuce\n',
+'tomato\n',
+'cheese\n',
+'catalina\n',
+'ground beef\n',
+'tostitos\n',
+'avocado\n'
 ],
 
-'Thai curry':
-['Vegetables\n',
-'Curry paste\n',
-'Stock\n',
-'Chicken, pork, chickpeas or cauliflower\n',
-'Coconut milk\n',
-'Rice\n',
-'Lime\n'
+'thai curry':
+['vegetables\n',
+'curry paste\n',
+'stock\n',
+'chicken, pork, chickpeas or cauliflower\n',
+'coconut milk\n',
+'rice\n',
+'lime\n'
 ],
 	
-'ShakeNbake':
-['Chicken or pork\n',
-'ShaneNbake mix\n'],
+'shake and bake':
+['chicken or pork\n',
+'shaneNbake mix\n'],
 
-'Spaghetti':
-['Ground beef\n',
-'Tomato sauce\n',
-'Mushrooms\n',
-'Pasta\n',
-'Onions']
+'spaghetti':
+['ground beef\n',
+'tomato sauce\n',
+'mushrooms\n',
+'pasta\n',
+'onions'],
+
+'pizza':
+['tomato sauce\n',
+'cheese\n',
+'toppings\n',
+'flour\n',
+'yeast\n']	
 
 }
 
@@ -185,7 +189,7 @@ def recordAudio():
 		audio = r.listen(source)
  
 # Speech recognition using Google Speech Recognition
-	data = ""
+	data = "".lower()
 	try:
 # Uses the default API key
 # To use another API key: `r.recognize_google(audio, key="GOOGLE_SPEECH_RECOGNITION_API_KEY")`
@@ -201,7 +205,7 @@ def recordAudio():
 #==============================================================================#
 #----------------------------------Her brains----------------------------------#
 #==============================================================================#
-
+																				
 def play(sound): #catch all play sound function
 	os.system('mpg321 {}'.format(sound))
 	
@@ -233,37 +237,36 @@ def forDinner():	 #meal planning
 						s.write(j)
 				s.close()
 				tryAgain = False
-				print('OK, added to the shopping list. Want me to send it now?')
+				print(reply + ' Want me to send it now?')
 				while 1:
 					data = input('...')
 					if data in yip:
-						print('sending it now')
-						ShoppingList()
+						print(reply)
+						ShoppingList()'
 						break
 
 					elif data in nupe:
-						print('Ok then.')
+						print(reply)
 						break
 						
 			elif 'keep' in data:
-				data = data.split(' ')
-				keep = data[1:-1]
-				if 'and' in data:
-					del keep[-2]
-					tonight = []
-					for k in keep:
-						tonight.append(k)
-					while len(tonight) < 4:
-						choice = menu.keys()
-						choice1 = ''
-						choice1 = random.sample(choice, 1)
-						if random.sample(choice, 1) not in tonight:
-							tonight.append(choice1)
-						else:
-							pass
+				choice = list(menu.keys())
+				for t in tonight:
+					if t in data:
+						pass
+					else:
+						tonight.remove(t)
 					
+				while len(tonight) < 4:
+					choice1 = ''
+					choice1 = random.choice(choice)
+					print(' chose ' + choice1)
+					if choice1 not in tonight:
+						tonight.append(choice1)
+						print('appended ' + choice1)
+					else:
+						pass
 
-						
 			else:
 				continue
 			break
@@ -419,9 +422,22 @@ def lightControl():
 			requests.get(tv + off)
 			
 	elif 'bedtime' in data:
+		time.sleep(2)
+		requests.get(tv + off)
+		time.sleep(2)
+		
 		pass
 		
-	elif 'beacon' in data:
+	# elif 'beacon' in data:
+	# 	if 'light the beacon' in data:
+	# 		requests.get(beacon + on)
+	# 		
+	# 	elif 'extinguish the beacon' in data:
+	# 		requests.get(beacon + off)
+	# 		
+	# 	elif 'color te beacon' in data:
+	# 		if 'ice' in data:
+	# 			requests.get(beacon + '/ice')
 		pass
 	
 def castPause():
@@ -470,7 +486,7 @@ def ada(data):
 	dtalk = os.chdir('..')
 	reply = './audio/replies/' + random.choice(os.listdir('./audio/replies/'))
 	now = datetime.now()
-	e = 'Ada '
+	e = 'ada '
 	check = ['Ada you there', 'Ada you up', 'Oh Ada']
 	#try:
 	if data in check:
@@ -552,7 +568,7 @@ def ada(data):
 	elif e + "send the shopping list" in data:
 		ShoppingList()
 
-	elif e + 'meal plan time' in data:
+	elif e + 'meal planner' in data:
 		play(gotIt)
 		forDinner()
 		
