@@ -1,161 +1,80 @@
-Quesadillas:
-Wraps
-Cheese
-Meat
-Taco seasoning
-salad
-
-Smokies:
-Smokies
-Buns
-salad
-
-Enchiladas:
-Cheese
-Chicken
-Wraps
-Tomato sauce
-Chicken stock
-Taco seasoning
-potato salad
-
-Quesadillas:
-Wraps
-Cheese
-Meat
-Taco seasoning
-dumplings
-
-Roast Chicken:
-Chicken
-dumplings
-frozen veg
-
-Burgers:
-Buns
-Ground beef
-Tomatoes
-Lettuce
-Eggs
-Garlic powder
-Milk
-Crackers
-roasted potatoes
-
-Burritos:
-Cheese
-Wraps
-Refried beans
-Mexican rice
-Canned corn
-Chicken
-Taco seasoning
-
-
-Burgers:
-Buns
-Ground beef
-Tomatoes
-Lettuce
-Eggs
-Garlic powder
-Milk
-Crackers
-dumplings
-
-Quesadillas:
-Wraps
-Cheese
-Meat
-Taco seasoning
-dumplings
-
-['milk', '
-', 'bread']
-Thai curry:
-Vegetables
-Curry paste
-Stock
-Chicken, pork, chickpeas or cauliflower
-Coconut milk
-Rice
-fries
-asparagus
-
-Meatloaf:
-Eggs
-Breadcrumbs or ShakenBake mix
-Ground beef
-potato salad
-coleslaw
-
-ShakeNbake:
-Chicken or pork
-perogies
-frozen veg
-
-Peanut chicken stir fry:
-Peanuts
-Peanut butter
-Sriracha
-Lime
-Rice
-Vegetable
-Garlic
-
-
 Hot dogs:
+
 Hot dog buns
 Hot dogs
-salad
-
-Spaghetti:
-Ground beef
-Tomato sauce
-Mushrooms
-Pasta
-mashed potatoes
-corn
-
+summer
 Quesadillas:
+
 Wraps
 Cheese
 Meat
 Taco seasoning
-roasted potatoes
+summer
+Mac n cheese:
 
-Pork with apple sauce:
-Pork
-Apple juice or apples
-Thyme
-Butter
-roasted potatoes
-coleslaw
+Pasta
+Cheese
+Milk
+Flour
+Additions (Bacon, meat, veggies, etc)
+no side
+Roast Chicken:
 
-Thai curry:
-Vegetables
-Curry paste
-Stock
-Chicken, pork, chickpeas or cauliflower
-Coconut milk
-Rice
-dumplings
-roasted carrots
+Chicken
 
-['milk']
-['milk']
-['milk']
-['milk']
-['milk']
-['milk']
-['cookies']
-['milk']
-['cookies']
-['milk']
-['cookies']
-['lalala']
-['milk']
-['milk']
-['milk']
-['out']
-['out']
+burritos:
+
+cheese
+wraps
+refried beans
+mexican rice
+canned corn
+chicken
+taco seasoning
+shake and bake:
+
+chicken or pork
+shaneNbake mix
+mac and cheese:
+
+pasta
+cheese
+milk
+flour
+additions (bacon, meat, veggies, etc)
+enchiladas:
+
+cheese
+chicken
+wraps
+tomato sauce
+chicken stock
+taco seasoning
+[]
+[]
+shepherds pie:
+
+potatoes
+ground beef
+creamed corn
+veggies
+brown gravy
+milk
+shake and bake:
+
+chicken or pork
+shaneNbake mix
+mac and cheese:
+
+pasta
+cheese
+milk
+flour
+additions (bacon, meat, veggies, etc)
+spaghetti:
+
+ground beef
+tomato sauce
+mushrooms
+pasta
+onions

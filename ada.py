@@ -16,7 +16,10 @@ from email.mime.text import MIMEText
 #import psutil
 import pychromecast
 from tqdm import tqdm
-import re
+from gmusicapi import Mobileclient, Musicmanager
+import vlc
+from google_music import MobileClient 
+import _thread
 #==============================================================================#
 #----------------------Database------------------------------------------------#
 #==============================================================================#
@@ -172,6 +175,10 @@ gotIt = './audio/sys/light.ogg'
 fail = '/audio/sys/botwfail.flac'
 yip = ['yes', 'yeah', 'sounds good', 'ok', 'sure']
 nupe = ['no', 'nope', 'noop', 'nah', 'no way']
+
+
+
+
 #==============================================================================#		
 #--------------------------Eyes and ears---------------------------------------#
 #==============================================================================#
@@ -181,6 +188,7 @@ def speak(audioString):
 	tts = gTTS(text=audioString, lang='en-GB')
 	tts.save("audio.mp3")
 	os.system("mpg321 audio.mp3")
+	
  
 def recordAudio():
 # Record Audio
@@ -216,6 +224,7 @@ def deeper():
 		
 def forDinner():	 #meal planning
 	tryAgain = True
+	tonight = []
 	tonight = menu.keys()
 	tonight = random.sample(tonight, 4)
 	while tryAgain == True:
@@ -242,7 +251,7 @@ def forDinner():	 #meal planning
 					data = input('...')
 					if data in yip:
 						print(reply)
-						ShoppingList()'
+						ShoppingList()
 						break
 
 					elif data in nupe:
@@ -390,7 +399,7 @@ def addToList():
 		play(firm)
 		pass
 	else:
-		thing = llst[4:]
+		thing = llst[3:]
 		list.write("%s\n" %thing)
 		speak("Added %s." %(thing))
 		list.close()
@@ -412,6 +421,9 @@ def lightControl():
 		elif 'turn off' in data:
 			play(gotIt)
 			requests.get(lamp + off)
+		elif 'daylight' or 'day light' in data:
+			play(gotIt)
+			requests.get(lamp + '/daylight')
 			
 	elif 'tv' in data:
 		if 'turn on' in data:
@@ -425,17 +437,19 @@ def lightControl():
 		time.sleep(2)
 		requests.get(tv + off)
 		time.sleep(2)
+		requests.get(lamp + off)
+		
 		
 		pass
 		
 	# elif 'beacon' in data:
 	# 	if 'light the beacon' in data:
-	# 		requests.get(beacon + on)
+	# 		requests.get(beacon)
 	# 		
 	# 	elif 'extinguish the beacon' in data:
 	# 		requests.get(beacon + off)
 	# 		
-	# 	elif 'color te beacon' in data:
+	# 	elif 'color the beacon' in data:
 	# 		if 'ice' in data:
 	# 			requests.get(beacon + '/ice')
 		pass
@@ -475,7 +489,76 @@ def volDown():
 def volLevel():
 		speak(str(vol * 100) + ' percent') 
 		print(vol)
-			
+
+def music(data):
+	data = data.split(' ')
+	global p
+	p  = vlc.MediaPlayer()
+	playing = 'State.Playing'
+	gmmc = MobileClient('548CA0CC3348')
+	gmmc.login('548CA0CC3348')
+	songs = []
+	length = []
+	songdict = {}	
+	srch = gmmc.search_google(data)
+	if 'play' in data:
+		data = data[1:]
+		artist = srch['artists'][0]
+		songlist = gmmc.shuffle_artist(artist, num_songs=100, only_artist=True)
+	elif 'play' in data and data[-1] == 'mix':
+		data = data[1:-2]
+		artist = srch['artists'][0]
+		songlist = gmmc.shuffle_artist(artist, num_songs=100)
+	elif data[-1] == 'music':
+		data = data[1:-2]
+		genre = srch['genres'][0]
+		songlist = gmmc.shuffle_genre(genre)
+	for s in songlist:
+		songs.append(s['storeId'])
+		length.append(int(s['durationMillis']) / 1000 + 5)
+	for s, l in zip(songs, length):
+		songdict[s] = l
+	gmmc.logout()
+
+	apimc = Mobileclient('548CA0CC3348')
+	mmc = Musicmanager('548CA0CC3348')
+	apimc.oauth_login('548CA0CC3348')
+
+	songs = []
+	length = []
+	songdict = {}	
+	srch = gmmc.search_google(data)
+	if 'play' in data:
+		data = data[1:]
+		artist = srch['artists'][0]
+		songlist = gmmc.shuffle_artist(artist, num_songs=100, only_artist=True)
+	elif 'play' in data and data[-1] == 'mix':
+		data = data[1:-2]
+		artist = srch['artists'][0]
+		songlist = gmmc.shuffle_artist(artist, num_songs=100)
+	elif data[-1] == 'music':
+		data = data[1:-2]
+		genre = srch['genredio = mmc.download_song(s)
+
+	for song in songdict:
+		p.audio_set_volume(75)		
+		print(song)
+		print(songdict[song])
+		url = apimc.get_stream_url(song)
+		print(url)
+		p.set_mrl(url)
+		p.play()
+		global state
+		state = str(p.get_state())
+		while state != 'State.Ended' or state != 'State.Stopped':
+			state = ''
+			state = str(p.get_state())
+			pass
+		print('ended')
+		time.sleep(1.5)
+
+	apimc.logout()
+	mmc.logout()
 	
 #==============================================================================#		
 #-------------------------Do shit----------------------------------------------#
@@ -486,147 +569,197 @@ def ada(data):
 	dtalk = os.chdir('..')
 	reply = './audio/replies/' + random.choice(os.listdir('./audio/replies/'))
 	now = datetime.now()
-	e = 'ada '
-	check = ['Ada you there', 'Ada you up', 'Oh Ada']
-	#try:
-	if data in check:
-		play(gotIt)
-		morn = play('./audio/Goodmorning..mp3 ')
-		aft = play('./audio/Goodafternoon..mp3')
-		eve = play('./audio/Goodevening.mp3')
-		i = ''
-		f = int(now.strftime('%H'))
-		if f in range(4, 11):
-			i= morn
-		elif f in range(12, 16):
-			i = aft
-		elif f in range(17, 24):
-			i = eve
-		else:
-			i = play('You\'re up late..mp3')
-
-		# called.write('1')
-		# if called.read() != '0':
-		# 	e = ''
-		# 	called.close()
-		# else:
-		# 	e = "Ada "
-		# 	called.write('0')
-
-		pass
+	e = 'ada'
+	# check = ['Ada you there', 'Ada you up', 'Oh Ada']
+	# #try:
+	# if data in check:
+	# 	play(gotIt)
+	# 	morn = play('./audio/Goodmorning..mp3 ')
+	# 	aft = play('./audio/Goodafternoon..mp3')
+	# 	eve = play('./audio/Goodevening.mp3')
+	# 	i = ''
+	# 	f = int(now.strftime('%H'))
+	# 	if f in range(4, 11):
+	# 		i= morn
+	# 	elif f in range(12, 16):
+	# 		i = aft
+	# 	elif f in range(17, 24):
+	# 		i = eve
+	# 	else:
+	# 		i = play('You\'re up late..mp3')
+	
+	if e in data:
+		try:
+			p.pause()
+		except:
+			pass
+		data = input('What? part deux\n')
 		
 #----------Info----------------------------------------------------------------#
 		
-	elif e + "what time is it" in data:
-		play(gotIt)
-		speak("It's " + now.strftime('%-I:%-M'))
-		pass
+		if "what time is it" in data:
+			play(gotIt)
+			speak("It's " + now.strftime('%-I:%-M'))
+			pass
+	
+		elif "tell me" in data:
+			play(gotIt)
+			try:
+				wolframThisShit()	
+			except:
+				speak('Nothing found. Want me to google it?')
+				while 1:
+					data = recordAudio()
+					data
+					data = data.split()
+					if data == 'Yes':
+						try:
+							googleSearch()
+						except:
+							speak('Sorry, nothing found.')
+		#elif e _ 'where am I' in data:
+		
+	#----------Media---------------------------------------------------------------#
+	
+		elif 'set' in data and 'volume' in data:
+			setVol()
+			
+		elif 'turn up' in data:
+			if 'tv' in data:
+				c = cast.status
+				c = c.split(',')
+				c= c[12].split('=')
+				if c[1] != '':
+					volUp()
+				else:
+					pass
+			elif 'music' in data:
+				state = ''
+				state = str(p.get_state)
+				if state == playing:
+					p.audio_set_volume(p.audio_get_volume() + 10	)				
+				else:
+					pass
+			else:
+				play(fail)
+				
+		elif 'turn it down' in data:
+			if 'tv' in data:
+				c = cast.status
+				c = c.split(',')
+				c= c[12].split('=')
+				if c[1] != '':
+					volDown()
+				else:
+					pass
+			elif 'music' in data:
+				state = ''
+				state = str(p.get_state)
+				if state == playing:
+					p.audio_set_volume(p.audio_get_volume() - 10	)			
+				else:
+					pass
+			else:
+				play(fail)
+			
+		elif 'press play' in data:
+			if 'tv' in data:
+				castPlay()
+			elif 'music' in data:
+				p.play()
+			else:
+				pass
+			
+		elif 'pause' in data:
+			if 'tv' in data:
+				castPause()
+			elif 'music' in data:
+				p.pause()
+			else:
+				pass
+		
+		elif 'play' in data:
+			musicThread = _thread.start_new_thread(music, (data,))
+		
+		elif 'skip' in data:
+			p.stop()
 
-	elif e + "tell me" in data:
-		play(gotIt)
-		try:
-			wolframThisShit()
-		except:
-			speak('Nothing found. Want me to google it?')
+			
+	#----------Food & shopping-----------------------------------------------------#
+		
+		elif "there\'s no more" in data:
+			play(gotIt)
+			addToList()
+			
+		elif 'what\'s on the shopping list'
+		elif "send the shopping list" in data:
+			ShoppingList()
+	
+		elif 'meal planner' in data:
+			play(gotIt)
+			forDinner()
+			
+	#----------Misc----------------------------------------------------------------#
+	
+		elif "initiate Lazarus protocol" in data:
+			play(gotIt)
+			email(email='monkay03@hotmail.com', content='<3')
+			speak("Lazarus protocol initiated")
+	
+		elif 'flip a coin' in data:
 			while 1:
+				coin = []
+				coin = random.choice(['heads.mp3', 'tails.mp3'])
+				time.sleep(3)
+				talk
+				speak(coin)
+				play('Goagain?.mp3')
+				dtalk
 				data = recordAudio()
 				data
-				data = data.split()
-				if data == 'Yes':
-					try:
-						googleSearch()
-					except:
-						speak('Sorry, nothing found.')
-	#elif e _ 'where am I' in data:
+				data = data.split(' ')
+				if data in yip:
+					continue
+				elif data in nupe:
+					talk
+					play('Finethen.mp3')
+					dtalk
+				break						
+			
+		elif 'what\'s it like out' in data:
+			play(gotIt)
+			weather()
 	
-#----------Media---------------------------------------------------------------#
+			
+		elif 'bedtime' in data:
+			requests.get('https://192.168.100.124/RELAY=ON')
+			
+		elif 'execute protocol Foxtrot Unicorn Charlie Kilo':
+			pass
+					
+		elif data == 'exit':
+			sys.exit()
+		
+		elif 'nevermind' in data:
+			pass
+			
+		else:
+			pass
+			
+	time.sleep(1)
+	p.play()
+	print('play')
 
-	elif e + 'set volume to' in data:
-		setVol()
-		
-	elif e + 'turn it up' in data:
-		volUp()
-	
-	elif e + 'turn it down' in data:
-		volDown()
-		
-	elif e + 'how loud' in data:
-		volLevel()
-		
-	elif e + 'press play' in data:
-		castPlay()
-		
-	elif e + 'pause' in data:
-		castPause()
-		
-#----------Food & shopping-----------------------------------------------------#
-	
-	elif e + "there\'s no more" in data:
-		play(gotIt)
-		addToList()
-		
-	elif e + "send the shopping list" in data:
-		ShoppingList()
-
-	elif e + 'meal planner' in data:
-		play(gotIt)
-		forDinner()
-		
-#----------Misc----------------------------------------------------------------#
-
-	elif e + "initiate Lazarus protocol" in data:
-		play(gotIt)
-		email(email='monkay03@hotmail.com', content='<3')
-		speak("Lazarus protocol initiated")
-
-	elif e + 'flip a coin' in data:
-		while 1:
-			coin = []
-			coin = random.choice(['heads.mp3', 'tails.mp3'])
-			time.sleep(3)
-			talk
-			speak(coin)
-			play('Goagain?.mp3')
-			dtalk
-			data = recordAudio()
-			data
-			data = data.split(' ')
-			if data in yip:
-				continue
-			elif data in nupe:
-				talk
-				play('Finethen.mp3')
-				dtalk
-			break						
-		
-	elif e + 'what\'s it like out' in data:
-		play(gotIt)
-		weather()
-
-		
-	elif e + 'bedtime' in data:
-		requests.get('https://192.168.100.124/RELAY=ON')
-		
-	elif e + 'execute protocol Foxtrot Unicorn Charlie Kilo':
-		pass
-				
-	elif data == 'exit':
-		sys.exit()
-		
-	else:
-		# called.write('0')
-		# called.close()
-		pass
-	#except:
-		#play('botwfail.flac')
-	#	pass
+		#except:
+			#play('botwfail.flac')
+		#	pass
 			
 #==============================================================================#
 #--------------------------initialization--------------------------------------#
 #==============================================================================#
 
 time.sleep(2)
-play('./audio/sys/startup.ogg')
+#play('./audio/sys/startup.mp3')
 
 # chromecasts = pychromecast.get_chromecasts() #start chromecast control
 # [cc.device.friendly_name for cc in chromecasts]
