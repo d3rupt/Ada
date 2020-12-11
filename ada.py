@@ -18,7 +18,7 @@ import pychromecast
 from tqdm import tqdm
 from gmusicapi import Mobileclient, Musicmanager
 import vlc
-from google_music import MobileClient 
+from google_music import MobileClient
 import _thread
 #==============================================================================#
 #----------------------Database------------------------------------------------#
@@ -30,7 +30,7 @@ emails = {
 }
 
 menu = {
-	
+
 'chicken':
 'chicken\n\n',
 
@@ -126,7 +126,7 @@ menu = {
 'thyme\n'
 'butter\n',
 'stock\n'],
-	
+
 'taco salad':
 ['lettuce\n',
 'tomato\n',
@@ -146,7 +146,7 @@ menu = {
 'rice\n',
 'lime\n'
 ],
-	
+
 'shake and bake':
 ['chicken or pork\n',
 'shaneNbake mix\n'],
@@ -163,7 +163,7 @@ menu = {
 'cheese\n',
 'toppings\n',
 'flour\n',
-'yeast\n']	
+'yeast\n']
 
 }
 
@@ -179,7 +179,7 @@ nupe = ['no', 'nope', 'noop', 'nah', 'no way']
 
 
 
-#==============================================================================#		
+#==============================================================================#
 #--------------------------Eyes and ears---------------------------------------#
 #==============================================================================#
 
@@ -188,14 +188,14 @@ def speak(audioString):
 	tts = gTTS(text=audioString, lang='en-GB')
 	tts.save("audio.mp3")
 	os.system("mpg321 audio.mp3")
-	
- 
+
+
 def recordAudio():
 # Record Audio
 	r = sr.Recognizer()
 	with sr.Microphone() as source:
 		audio = r.listen(source)
- 
+
 # Speech recognition using Google Speech Recognition
 	data = "".lower()
 	try:
@@ -205,7 +205,7 @@ def recordAudio():
 		print("You said: " + data)
 	except sr.UnknownValueError as f:
 		print("Ada could not understand audio")
-		
+
 	except sr.RequestError as e:
 		print("Could not request results from Google Speech Recognition service; {0}".format(e))
 	return data
@@ -213,22 +213,22 @@ def recordAudio():
 #==============================================================================#
 #----------------------------------Her brains----------------------------------#
 #==============================================================================#
-																				
+
 def play(sound): #catch all play sound function
 	os.system('mpg321 {}'.format(sound))
-	
+
 def deeper():
 	data  = recordAudio()
 	while 1:
 		data
-		
+
 def forDinner():	 #meal planning
 	tryAgain = True
 	tonight = []
 	tonight = menu.keys()
 	tonight = random.sample(tonight, 4)
 	while tryAgain == True:
-		#mnu = "How about {}, and {}?".format(for t in tonight[0:-1], tonight[-1]) 
+		#mnu = "How about {}, and {}?".format(for t in tonight[0:-1], tonight[-1])
 		mnu = "How about " + tonight[0] + ", " + tonight[1] + ", " + tonight[2] + ", and " + tonight[3] + "?"
 		print(mnu)
 		while 1:
@@ -237,7 +237,7 @@ def forDinner():	 #meal planning
 			data
 			if data in nupe:
 				print('Ok, trying again.')
-			
+
 			elif data in yip:
 				s = open(shoppingList, 'a+')
 				for i in tonight:
@@ -257,7 +257,7 @@ def forDinner():	 #meal planning
 					elif data in nupe:
 						print(reply)
 						break
-						
+
 			elif 'keep' in data:
 				choice = list(menu.keys())
 				for t in tonight:
@@ -265,7 +265,7 @@ def forDinner():	 #meal planning
 						pass
 					else:
 						tonight.remove(t)
-					
+
 				while len(tonight) < 4:
 					choice1 = ''
 					choice1 = random.choice(choice)
@@ -305,18 +305,18 @@ def ShoppingList():
 			</body>
 			</html>
 			'''.format(items)
-			
+
 			list1 = MIMEText(list1, 'html')
 			email(email=emails.get(data), content=list1.as_string())
 			play(reply)
-		
+
 		else:
 			play('botwfail.flac')
 			pass
 		break
-	
+
 def weather(): #weather duh
-	API_key = 'fc1e626cf9767a060d5f305178089700'
+	API_key
 	cache = LRUCache()
 	owm = OWM(API_key)
 	obs = owm.weather_at_id(6183235)
@@ -336,7 +336,7 @@ def weather(): #weather duh
 		if 'yes' in data:
 			hi = w.get_temperature(str(temp['temp_max']), unit='celsius')
 			lo = w.get_temperature(str(temp['temp_min']), unit='celsius')
-			if int(now.strftime('%H')) < 13: 
+			if int(now.strftime('%H')) < 13:
 				speak('Today will reach a high of ' + str(hi) + ' with ' + w.get_clouds())
 			else:
 				speak('Tonight will reach a low of ' + str(lo) + ' with ' + w.get_clouds())
@@ -347,9 +347,9 @@ def weather(): #weather duh
 def playMusic(): #play music from... play music.
 	api = Mobileclient()
 	api.search("token code red", max_results=1)
-	
+
 def wolframThisShit(): #catch all look shit up
-	app_id = "HJVXH3-4XQ32P9PTJ"   #Put wolfram API here
+	app_id = ""   #API KEY
 	client = wolframalpha.Client(app_id)
 	dataa = data.split(' ')
 	dataa = dataa[3:]
@@ -374,17 +374,17 @@ def googleSearch(): #for when wolfram fails
 		speak(result.text)
 	except:
 		speak('I can\'t find that')
-		
+
 def email(email, content):#catch all email function
 	port = 465  # For SSL
 
 	context = ssl.create_default_context() #create a secure SSL context
 	list = open('shoppingList.txt').read()
 	with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
-		server.login("thisisada69@gmail.com", "Coulson1")
-		server.sendmail("thisisada69@gmail.com", email, content)
+		server.login("", "")
+		server.sendmail("", email, content)
 		server.close()
-		
+
 def addToList():
 	list = open(shoppingList, 'a+')
 	llst = data.split(" ")
@@ -404,7 +404,7 @@ def addToList():
 		speak("Added %s." %(thing))
 		list.close()
 		play(reply)
-		
+
 #==============================================================================#
 #-----------------------Home automation----------------------------------------#
 #==============================================================================#
@@ -424,7 +424,7 @@ def lightControl():
 		elif 'daylight' or 'day light' in data:
 			play(gotIt)
 			requests.get(lamp + '/daylight')
-			
+
 	elif 'tv' in data:
 		if 'turn on' in data:
 			play(gotIt)
@@ -432,34 +432,32 @@ def lightControl():
 		elif 'turn off' in data:
 			play(gotIt)
 			requests.get(tv + off)
-			
+
 	elif 'bedtime' in data:
 		time.sleep(2)
 		requests.get(tv + off)
 		time.sleep(2)
 		requests.get(lamp + off)
-		
-		
 		pass
-		
+
 	# elif 'beacon' in data:
 	# 	if 'light the beacon' in data:
 	# 		requests.get(beacon)
-	# 		
+	#
 	# 	elif 'extinguish the beacon' in data:
 	# 		requests.get(beacon + off)
-	# 		
+	#
 	# 	elif 'color the beacon' in data:
 	# 		if 'ice' in data:
 	# 			requests.get(beacon + '/ice')
 		pass
-	
+
 def castPause():
 	mc.pause()
-		
+
 def castPlay():
 	mc.play()
-		
+
 def setVol():
 	data = data.split(' ')
 	i = int(data[4])
@@ -472,7 +470,7 @@ def setVol():
 			print('volume:' + str(vol))
 	else:
 		play(fail)
-			
+
 def volUp():
 		if vol < 1.0:
 			cast.set_volume(vol + 0.2)
@@ -485,9 +483,9 @@ def volDown():
 			print(vol)
 		else:
 			play(fail)
-						
+
 def volLevel():
-		speak(str(vol * 100) + ' percent') 
+		speak(str(vol * 100) + ' percent')
 		print(vol)
 
 def music(data):
@@ -499,7 +497,7 @@ def music(data):
 	gmmc.login('548CA0CC3348')
 	songs = []
 	length = []
-	songdict = {}	
+	songdict = {}
 	srch = gmmc.search_google(data)
 	if 'play' in data:
 		data = data[1:]
@@ -526,7 +524,7 @@ def music(data):
 
 	songs = []
 	length = []
-	songdict = {}	
+	songdict = {}
 	srch = gmmc.search_google(data)
 	if 'play' in data:
 		data = data[1:]
@@ -541,7 +539,7 @@ def music(data):
 		genre = srch['genredio = mmc.download_song(s)
 
 	for song in songdict:
-		p.audio_set_volume(75)		
+		p.audio_set_volume(75)
 		print(song)
 		print(songdict[song])
 		url = apimc.get_stream_url(song)
@@ -559,8 +557,8 @@ def music(data):
 
 	apimc.logout()
 	mmc.logout()
-	
-#==============================================================================#		
+
+#==============================================================================#
 #-------------------------Do shit----------------------------------------------#
 #==============================================================================#
 
@@ -587,25 +585,25 @@ def ada(data):
 	# 		i = eve
 	# 	else:
 	# 		i = play('You\'re up late..mp3')
-	
+
 	if e in data:
 		try:
 			p.pause()
 		except:
 			pass
 		data = input('What? part deux\n')
-		
+
 #----------Info----------------------------------------------------------------#
-		
+
 		if "what time is it" in data:
 			play(gotIt)
 			speak("It's " + now.strftime('%-I:%-M'))
 			pass
-	
+
 		elif "tell me" in data:
 			play(gotIt)
 			try:
-				wolframThisShit()	
+				wolframThisShit()
 			except:
 				speak('Nothing found. Want me to google it?')
 				while 1:
@@ -618,12 +616,12 @@ def ada(data):
 						except:
 							speak('Sorry, nothing found.')
 		#elif e _ 'where am I' in data:
-		
+
 	#----------Media---------------------------------------------------------------#
-	
+
 		elif 'set' in data and 'volume' in data:
 			setVol()
-			
+
 		elif 'turn up' in data:
 			if 'tv' in data:
 				c = cast.status
@@ -637,12 +635,12 @@ def ada(data):
 				state = ''
 				state = str(p.get_state)
 				if state == playing:
-					p.audio_set_volume(p.audio_get_volume() + 10	)				
+					p.audio_set_volume(p.audio_get_volume() + 10	)
 				else:
 					pass
 			else:
 				play(fail)
-				
+
 		elif 'turn it down' in data:
 			if 'tv' in data:
 				c = cast.status
@@ -656,12 +654,12 @@ def ada(data):
 				state = ''
 				state = str(p.get_state)
 				if state == playing:
-					p.audio_set_volume(p.audio_get_volume() - 10	)			
+					p.audio_set_volume(p.audio_get_volume() - 10	)
 				else:
 					pass
 			else:
 				play(fail)
-			
+
 		elif 'press play' in data:
 			if 'tv' in data:
 				castPlay()
@@ -669,7 +667,7 @@ def ada(data):
 				p.play()
 			else:
 				pass
-			
+
 		elif 'pause' in data:
 			if 'tv' in data:
 				castPause()
@@ -677,35 +675,35 @@ def ada(data):
 				p.pause()
 			else:
 				pass
-		
+
 		elif 'play' in data:
 			musicThread = _thread.start_new_thread(music, (data,))
-		
+
 		elif 'skip' in data:
 			p.stop()
 
-			
+
 	#----------Food & shopping-----------------------------------------------------#
-		
+
 		elif "there\'s no more" in data:
 			play(gotIt)
 			addToList()
-			
+
 		elif 'what\'s on the shopping list'
 		elif "send the shopping list" in data:
 			ShoppingList()
-	
+
 		elif 'meal planner' in data:
 			play(gotIt)
 			forDinner()
-			
+
 	#----------Misc----------------------------------------------------------------#
-	
+
 		elif "initiate Lazarus protocol" in data:
 			play(gotIt)
 			email(email='monkay03@hotmail.com', content='<3')
 			speak("Lazarus protocol initiated")
-	
+
 		elif 'flip a coin' in data:
 			while 1:
 				coin = []
@@ -724,28 +722,28 @@ def ada(data):
 					talk
 					play('Finethen.mp3')
 					dtalk
-				break						
-			
+				break
+
 		elif 'what\'s it like out' in data:
 			play(gotIt)
 			weather()
-	
-			
+
+
 		elif 'bedtime' in data:
 			requests.get('https://192.168.100.124/RELAY=ON')
-			
+
 		elif 'execute protocol Foxtrot Unicorn Charlie Kilo':
 			pass
-					
+
 		elif data == 'exit':
 			sys.exit()
-		
+
 		elif 'nevermind' in data:
 			pass
-			
+
 		else:
 			pass
-			
+
 	time.sleep(1)
 	p.play()
 	print('play')
@@ -753,7 +751,7 @@ def ada(data):
 		#except:
 			#play('botwfail.flac')
 		#	pass
-			
+
 #==============================================================================#
 #--------------------------initialization--------------------------------------#
 #==============================================================================#
@@ -771,7 +769,7 @@ time.sleep(2)
 # proc = [] #gather processes for startup
 # for process in tqdm(psutil.process_iter()):
 # 	proc.append(process.cmdLine())
-# 	print(process.ccmdLine())	
+# 	print(process.ccmdLine())
 # startup = ['python3', 'startup.py']
 # if startup not in  proc:
 # 	Popen(startup)
@@ -779,10 +777,9 @@ time.sleep(2)
 # 	pass
 
 
-	
+
 while 1:
 	reply = ''
 	#data = recordAudio()
 	data = input('What?')
 	ada(data)
-	
