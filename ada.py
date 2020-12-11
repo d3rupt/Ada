@@ -493,8 +493,8 @@ def music(data):
 	global p
 	p  = vlc.MediaPlayer()
 	playing = 'State.Playing'
-	gmmc = MobileClient('548CA0CC3348')
-	gmmc.login('548CA0CC3348')
+	gmmc = MobileClient('')
+	gmmc.login('')
 	songs = []
 	length = []
 	songdict = {}
@@ -518,9 +518,9 @@ def music(data):
 		songdict[s] = l
 	gmmc.logout()
 
-	apimc = Mobileclient('548CA0CC3348')
-	mmc = Musicmanager('548CA0CC3348')
-	apimc.oauth_login('548CA0CC3348')
+	apimc = Mobileclient('')
+	mmc = Musicmanager('')
+	apimc.oauth_login('')
 
 	songs = []
 	length = []
